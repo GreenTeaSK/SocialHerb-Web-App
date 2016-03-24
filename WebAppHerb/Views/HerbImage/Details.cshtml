@@ -1,0 +1,75 @@
+﻿@model WebAppHerb.Models.HerbImage
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HerbImage</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.herbID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shootTip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shootTip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.groundTissue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.groundTissue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leaf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leaf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flower)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seeds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.root)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.root)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.herbImageID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

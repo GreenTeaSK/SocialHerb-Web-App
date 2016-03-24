@@ -162,6 +162,7 @@
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\DiseaseController.cs" />
     <Compile Include="Controllers\HerbController.cs" />
+    <Compile Include="Controllers\HerbImageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InfographicController.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,6 +179,18 @@
     <Compile Include="Migrations\201603240553111_Herb1.cs" />
     <Compile Include="Migrations\201603240553111_Herb1.Designer.cs">
       <DependentUpon>201603240553111_Herb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603240747085_Herb2.cs" />
+    <Compile Include="Migrations\201603240747085_Herb2.Designer.cs">
+      <DependentUpon>201603240747085_Herb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603240802198_HerbImage.cs" />
+    <Compile Include="Migrations\201603240802198_HerbImage.Designer.cs">
+      <DependentUpon>201603240802198_HerbImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603240830358_Research.cs" />
+    <Compile Include="Migrations\201603240830358_Research.Designer.cs">
+      <DependentUpon>201603240830358_Research.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -254,6 +267,11 @@
     <Content Include="Views\Infographic\Details.cshtml" />
     <Content Include="Views\Infographic\Edit.cshtml" />
     <Content Include="Views\Infographic\Index.cshtml" />
+    <Content Include="Views\HerbImage\Create.cshtml" />
+    <Content Include="Views\HerbImage\Delete.cshtml" />
+    <Content Include="Views\HerbImage\Details.cshtml" />
+    <Content Include="Views\HerbImage\Edit.cshtml" />
+    <Content Include="Views\HerbImage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +292,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603240553111_Herb1.resx">
       <DependentUpon>201603240553111_Herb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603240747085_Herb2.resx">
+      <DependentUpon>201603240747085_Herb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603240802198_HerbImage.resx">
+      <DependentUpon>201603240802198_HerbImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603240830358_Research.resx">
+      <DependentUpon>201603240830358_Research.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

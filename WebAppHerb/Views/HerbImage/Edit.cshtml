@@ -1,0 +1,91 @@
+﻿@model WebAppHerb.Models.HerbImage
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>HerbImage</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.herbImageID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.herbID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.herbID)
+                @Html.ValidationMessageFor(model => model.herbID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.shootTip, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.shootTip)
+                @Html.ValidationMessageFor(model => model.shootTip)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.groundTissue, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.groundTissue)
+                @Html.ValidationMessageFor(model => model.groundTissue)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.leaf, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.leaf)
+                @Html.ValidationMessageFor(model => model.leaf)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.flower, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.flower)
+                @Html.ValidationMessageFor(model => model.flower)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.seeds, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.seeds)
+                @Html.ValidationMessageFor(model => model.seeds)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.root, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.root)
+                @Html.ValidationMessageFor(model => model.root)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

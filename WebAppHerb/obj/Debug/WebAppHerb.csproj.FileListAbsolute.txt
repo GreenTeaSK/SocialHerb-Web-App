@@ -57,3 +57,6 @@ E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migratio
 E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.csproj.GenerateResource.Cache
 E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Herb.resources
 E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Herb1.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Herb2.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.HerbImage.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Research.resources

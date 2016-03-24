@@ -35,12 +35,6 @@ namespace WebAppHerb.Models
 
         [Display(Name = "ชื่ออื่นๆ")]
         public string herbNameOther { get; set; }
-
-        [Display(Name = "งานวิจัยที่เกี่ยวข้อง")]
-        public string herbResearch { get; set; }
-
-        [Display(Name = "ชื่องานวิจัย")]
-        public string herbResearchName { get; set; }
     }
 
     public class Disease
@@ -117,6 +111,46 @@ namespace WebAppHerb.Models
         public string articleRating { get; set; }
     }
 
+    public class HerbImage
+    {
+        public string herbImageID { get; set; }
+
+        [Display(Name = "ชื่อสมุนไพร")]
+        public string herbID { get; set; }
+
+        [Display(Name = "รูปของส่วนยอด")]
+        public string shootTip { get; set; }
+
+        [Display(Name = "รูปของส่วนลำต้น")]
+        public string groundTissue { get; set; }
+
+        [Display(Name = "รูปของส่วนใบ")]
+        public string leaf { get; set; }
+
+        [Display(Name = "รูปของส่วนดอก")]
+        public string flower { get; set; }
+
+        [Display(Name = "รูปของส่วนผล/เมล็ด")]
+        public string seeds { get; set; }
+
+        [Display(Name = "รูปของส่วนราก/หัว")]
+        public string root { get; set; }
+    }
+
+    public class Research
+    {
+        public string researchID { get; set; }
+
+        [Display(Name = "ชื่องานวิจัย")]
+        public string researchName { get; set; }
+
+        [Display(Name = "URL งานวิจัย")]
+        public string researchLink { get; set; }
+
+        [Display(Name = "สมุนไพรที่วิจัย")]
+        public string herbID { get; set; }
+    }
+
     public class WebAppHerbDBContext : DbContext
     {
         public DbSet<Herb> Herbs { get; set; }
@@ -126,5 +160,7 @@ namespace WebAppHerb.Models
         public DbSet<Pharmacist> Pharmacists { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Rating> Ratings { get; set; }
+        public DbSet<HerbImage> HerbImages { get; set; }
+        public DbSet<Research> Researchs { get; set; }
     }
 }
