@@ -31,6 +31,9 @@
             @Html.DisplayNameFor(model => model.herbDirect)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.herbResearchName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.herbResearch)
         </th>
         <th>
@@ -60,6 +63,9 @@
             </td>
             <td>
                <pre> @Html.DisplayFor(modelItem => item.herbDirect)</pre>
+            </td>
+            <td>
+                <pre>@Html.DisplayFor(modelItem => item.herbResearchName)</pre>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.herbResearch)
