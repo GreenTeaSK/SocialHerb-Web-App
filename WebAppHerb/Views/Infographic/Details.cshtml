@@ -1,0 +1,42 @@
+﻿@model WebAppHerb.Models.Infographic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Infographic</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.infographicName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.infographicName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InfographicReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InfographicReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.infographicImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.infographicImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.infographicID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

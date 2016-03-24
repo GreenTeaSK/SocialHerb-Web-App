@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WebAppHerb.Models.Herb>
+
+@{
+    ViewBag.Title = "Herb - ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br><br>
+<h2>สมุนไพร</h2>
+
+<p class="btn btn-default">
+    @Html.ActionLink("Add", "Create")
+</p>
+<table class="table table-bordered">
+    <tr class="active">
+        <th>
+            @Html.DisplayNameFor(model => model.herbName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbNameOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbDetail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbProperties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbHowto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbDirect)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbResearch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbImage)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="success">
+            <td>
+                @Html.DisplayFor(modelItem => item.herbName)
+            </td>
+            <td>
+                <pre>@Html.DisplayFor(modelItem => item.herbNameOther)</pre>
+            </td>
+            <td>
+                <pre>@Html.DisplayFor(modelItem => item.herbDetail)</pre>
+            </td>
+            <td>
+                <pre>@Html.DisplayFor(modelItem => item.herbProperties)</pre>
+            </td>
+            <td>
+                <pre>@Html.DisplayFor(modelItem => item.herbHowto)</pre>
+            </td>
+            <td>
+               <pre> @Html.DisplayFor(modelItem => item.herbDirect)</pre>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.herbResearch)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.herbImage)" width="100" height="100" />
+            </td>
+            <td>
+                <p class="btn btn-default">
+                    @Html.ActionLink("Update", "Edit", new { id = item.herbID })
+                </p>
+            </td>
+            <td>
+                <p class="btn btn-default">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.herbID })
+                </p>
+            </td>
+        </tr>
+    }
+
+</table>

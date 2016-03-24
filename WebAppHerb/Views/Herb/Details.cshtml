@@ -1,0 +1,66 @@
+﻿@model WebAppHerb.Models.Herb
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Herb</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.herbName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.herbDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.herbProperties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbProperties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.herbHowto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbHowto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.herbDirect)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbDirect)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.herbImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.herbID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
