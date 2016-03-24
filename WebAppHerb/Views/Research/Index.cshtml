@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WebAppHerb.Models.Research>
+
+@{
+    ViewBag.Title = "Research -";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br><br>
+<h2>งานวิจัย</h2>
+
+<p class="btn btn-default">
+    @Html.ActionLink("Add", "Create")
+</p>
+<table class="table table-bordered">
+    <tr class="active">
+        <th>
+            @Html.DisplayNameFor(model => model.researchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.researchLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbID)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="success">
+        <td>
+            @Html.DisplayFor(modelItem => item.researchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.researchLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.herbID)
+        </td>
+        <td>
+            <p class="btn btn-default">
+                @Html.ActionLink("Update", "Edit", new { id = item.researchID })
+            </p>
+        </td>
+        <td>
+            <p class="btn btn-default">
+                @Html.ActionLink("Delete", "Delete", new { id = item.researchID })
+            </p>
+        </td>
+    </tr>
+}
+
+</table>
