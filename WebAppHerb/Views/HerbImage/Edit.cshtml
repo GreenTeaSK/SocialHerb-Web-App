@@ -1,11 +1,11 @@
 ﻿@model WebAppHerb.Models.HerbImage
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Herb Image Update -";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Edit</h2>
+<br><br>
+<h2>Update</h2>
 
 
 @using (Html.BeginForm())
@@ -13,23 +13,23 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>HerbImage</h4>
+        <h4>รูปภาพสมุนไพร</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.herbImageID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.herbID, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.herbName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.herbID)
-                @Html.ValidationMessageFor(model => model.herbID)
+                @Html.TextBoxFor(model => model.herbName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.herbName)
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.shootTip, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.shootTip)
+                @Html.TextBoxFor(model => model.shootTip, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.shootTip)
             </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.groundTissue, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.groundTissue)
+                @Html.TextBoxFor(model => model.groundTissue, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.groundTissue)
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.leaf, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.leaf)
+                @Html.TextBoxFor(model => model.leaf, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.leaf)
             </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.flower, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.flower)
+                @Html.TextBoxFor(model => model.flower, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.flower)
             </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.seeds, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.seeds)
+                @Html.TextBoxFor(model => model.seeds, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.seeds)
             </div>
         </div>
@@ -69,7 +69,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.root, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.root)
+                @Html.TextBoxFor(model => model.root, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.root)
             </div>
         </div>

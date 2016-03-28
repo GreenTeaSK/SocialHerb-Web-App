@@ -46,7 +46,7 @@ namespace WebAppHerb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="herbID,herbName,herbDetail,herbProperties,herbHowto,herbDirect,herbImage")] Herb herb)
+        public ActionResult Create([Bind(Include="herbName,herbDetail,herbProperties,herbHowto,herbDirect,herbImage")] Herb herb)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace WebAppHerb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="herbID,herbName,herbDetail,herbProperties,herbHowto,herbDirect,herbImage")] Herb herb)
+        public ActionResult Edit([Bind(Include="herbName,herbDetail,herbProperties,herbHowto,herbDirect,herbImage")] Herb herb)
         {
             if (ModelState.IsValid)
             {
