@@ -60,3 +60,13 @@ E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migratio
 E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Herb2.resources
 E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.HerbImage.resources
 E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Research.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Herb3.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Herb4.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Disease.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Disease1.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Comment.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Disease2.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Disease3.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Rating.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.HerbImage1.resources
+E:\SE3-2558\Project I\WebApp\WebAppHerb\WebAppHerb\obj\Debug\WebAppHerb.Migrations.Research1.resources

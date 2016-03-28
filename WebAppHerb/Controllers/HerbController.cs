@@ -50,9 +50,9 @@ namespace WebAppHerb.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Herbs.Add(herb);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                    db.Herbs.Add(herb);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");    
             }
 
             return View(herb);

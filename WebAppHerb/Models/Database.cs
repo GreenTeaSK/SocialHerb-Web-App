@@ -13,9 +13,8 @@ namespace WebAppHerb.Models
 
     public class Herb
     {
-        public string herbID { get; set; }
-
         [Display(Name="ชื่อสมุนไพร")]
+        [Key]
         public string herbName { get; set; }
 
         [Display(Name="ลักษณะของสมุนไพร")]
@@ -48,7 +47,7 @@ namespace WebAppHerb.Models
         public string syntom { get; set; }
 
         [Display(Name = "สมุนไพรที่เกี่ยวข้อง")]
-        public string herbID { get; set; }
+        public string herbName { get; set; }
     }
 
     public class Article
@@ -97,7 +96,7 @@ namespace WebAppHerb.Models
         public string commentID { get; set; }
         public DateTime date { get; set; }
         public string username { get; set; }
-        public string herbID { get; set; }
+        public string herbName { get; set; }
         public string herbComment { get; set; }
         public string diseaseID { get; set; }
         public string diseaseComment { get; set; }
@@ -105,7 +104,7 @@ namespace WebAppHerb.Models
     public class Rating
     {
         public string ratingID { get; set; }
-        public string herbID { get; set; }
+        public string herbName { get; set; }
         public string herbRating { get; set; }
         public string articleID { get; set; }
         public string articleRating { get; set; }
@@ -116,7 +115,7 @@ namespace WebAppHerb.Models
         public string herbImageID { get; set; }
 
         [Display(Name = "ชื่อสมุนไพร")]
-        public string herbID { get; set; }
+        public string herbName { get; set; }
 
         [Display(Name = "รูปของส่วนยอด")]
         public string shootTip { get; set; }
@@ -148,7 +147,7 @@ namespace WebAppHerb.Models
         public string researchLink { get; set; }
 
         [Display(Name = "สมุนไพรที่วิจัย")]
-        public string herbID { get; set; }
+        public string herbName { get; set; }
     }
 
     public class WebAppHerbDBContext : DbContext

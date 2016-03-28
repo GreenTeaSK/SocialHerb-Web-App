@@ -193,6 +193,46 @@
     <Compile Include="Migrations\201603240830358_Research.Designer.cs">
       <DependentUpon>201603240830358_Research.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603280823434_Herb3.cs" />
+    <Compile Include="Migrations\201603280823434_Herb3.Designer.cs">
+      <DependentUpon>201603280823434_Herb3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280840231_Herb4.cs" />
+    <Compile Include="Migrations\201603280840231_Herb4.Designer.cs">
+      <DependentUpon>201603280840231_Herb4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280841313_Disease.cs" />
+    <Compile Include="Migrations\201603280841313_Disease.Designer.cs">
+      <DependentUpon>201603280841313_Disease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280842551_Disease1.cs" />
+    <Compile Include="Migrations\201603280842551_Disease1.Designer.cs">
+      <DependentUpon>201603280842551_Disease1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280844150_Comment.cs" />
+    <Compile Include="Migrations\201603280844150_Comment.Designer.cs">
+      <DependentUpon>201603280844150_Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280844591_Disease2.cs" />
+    <Compile Include="Migrations\201603280844591_Disease2.Designer.cs">
+      <DependentUpon>201603280844591_Disease2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280845301_Disease3.cs" />
+    <Compile Include="Migrations\201603280845301_Disease3.Designer.cs">
+      <DependentUpon>201603280845301_Disease3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280847160_Rating.cs" />
+    <Compile Include="Migrations\201603280847160_Rating.Designer.cs">
+      <DependentUpon>201603280847160_Rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280848111_HerbImage1.cs" />
+    <Compile Include="Migrations\201603280848111_HerbImage1.Designer.cs">
+      <DependentUpon>201603280848111_HerbImage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603280848499_Research1.cs" />
+    <Compile Include="Migrations\201603280848499_Research1.Designer.cs">
+      <DependentUpon>201603280848499_Research1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Database.cs" />
@@ -307,6 +347,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603240830358_Research.resx">
       <DependentUpon>201603240830358_Research.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280823434_Herb3.resx">
+      <DependentUpon>201603280823434_Herb3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280840231_Herb4.resx">
+      <DependentUpon>201603280840231_Herb4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280841313_Disease.resx">
+      <DependentUpon>201603280841313_Disease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280842551_Disease1.resx">
+      <DependentUpon>201603280842551_Disease1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280844150_Comment.resx">
+      <DependentUpon>201603280844150_Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280844591_Disease2.resx">
+      <DependentUpon>201603280844591_Disease2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280845301_Disease3.resx">
+      <DependentUpon>201603280845301_Disease3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280847160_Rating.resx">
+      <DependentUpon>201603280847160_Rating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280848111_HerbImage1.resx">
+      <DependentUpon>201603280848111_HerbImage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603280848499_Research1.resx">
+      <DependentUpon>201603280848499_Research1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
