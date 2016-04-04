@@ -12,18 +12,21 @@ namespace WebAppHerb.Models
     public class ServiceHerb
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDb)\v11.0;Initial Catalog=WebAppHerbDB;Persist Security Info=True;User ID=admin;Password=admin; Integrated Security=True; MultipleActiveResultSets=True;");
+      /*  WebAppHerbDBContext database = new WebAppHerbDBContext();
+        string connect = SqlConnectionStringBuilder(); */
+        Herb herbObj = new Herb();
 
         public string Test(string nameHerb)
         {
             connection.Open();
-            SqlCommand herb = new SqlCommand("SELECT * FROM Herbs WHERE herbName ='" + nameHerb + "'", connection);
+            SqlCommand herb = new SqlCommand("SELECT herbName,herbDetail,herbProperties FROM Herbs WHERE herbName ='" + nameHerb + "'", connection);
             SqlDataReader dr = herb.ExecuteReader();
 
             while (dr.Read())
             {
-                nameHerb = dr["herbName"].ToString();
-                string detail = dr["herbDetail"].ToString();
-                string prop = dr["herbProperties"].ToString();
+                herbObj.herbName = dr["herbName"].ToString();
+                herbObj.herbDetail = dr["herbDetail"].ToString();
+                herbObj.herbProperties = dr["herbProperties"].ToString();
             }
             dr.Close();
             connection.Close();
