@@ -237,7 +237,12 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ServiceHerb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialHerbService.asmx.cs">
+      <DependentUpon>SocialHerbService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +266,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SocialHerbService.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -321,6 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Web Service\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
