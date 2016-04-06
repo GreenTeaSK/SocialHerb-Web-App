@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace WebAppHerb.Models
 {
@@ -14,6 +15,7 @@ namespace WebAppHerb.Models
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDb)\v11.0;Initial Catalog=WebAppHerbDB;Persist Security Info=True;User ID=admin;Password=admin; Integrated Security=True; MultipleActiveResultSets=True;");
       /*  WebAppHerbDBContext database = new WebAppHerbDBContext();
         string connect = SqlConnectionStringBuilder(); */
+        string connect;
         Herb herbObj = new Herb();
 
         public string Test(string nameHerb)
