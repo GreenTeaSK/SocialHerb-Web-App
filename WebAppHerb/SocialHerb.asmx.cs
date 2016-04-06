@@ -18,7 +18,7 @@ namespace WebAppHerb
     {
 
         [WebMethod]
-        public string Webservice()
+        public string webservice()
         {
             return "Web Service";
         }
