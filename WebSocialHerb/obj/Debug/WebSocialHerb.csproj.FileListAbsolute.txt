@@ -81,3 +81,4 @@ E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\obj\Debug\WebSocialHerb
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\obj\Debug\WebSocialHerb.pdb
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\MySql.Data.dll
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\MySql.Data.Entity.EF6.dll
+E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\obj\Debug\WebSocialHerb.csprojResolveAssemblyReference.cache
