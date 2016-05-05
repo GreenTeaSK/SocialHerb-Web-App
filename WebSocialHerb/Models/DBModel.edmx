@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="socialherbdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="article">
+          <Key>
+            <PropertyRef Name="ArticleID" />
+          </Key>
+          <Property Name="ArticleID" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="ArticleName" Type="text" Nullable="false" />
+          <Property Name="Article" Type="text" Nullable="false" />
+          <Property Name="ArticleReference" Type="text" Nullable="false" />
+          <Property Name="ArticleImage" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="disease">
+          <Key>
+            <PropertyRef Name="DiseaseID" />
+          </Key>
+          <Property Name="DiseaseID" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="DiseaseName" Type="text" Nullable="false" />
+          <Property Name="Syntom" Type="text" Nullable="false" />
+          <Property Name="Herb" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="herb">
+          <Key>
+            <PropertyRef Name="HerbName" />
+          </Key>
+          <Property Name="HerbName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NameOther" Type="text" />
+          <Property Name="HerbImg" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Leaf" Type="text" />
+          <Property Name="LeafImg" Type="varchar" MaxLength="200" />
+          <Property Name="Trunk" Type="text" />
+          <Property Name="TrunkImg" Type="varchar" MaxLength="200" />
+          <Property Name="Root" Type="text" />
+          <Property Name="RootImg" Type="varchar" MaxLength="200" />
+          <Property Name="Crop" Type="text" />
+          <Property Name="CropImg" Type="varchar" MaxLength="200" />
+          <Property Name="Corm" Type="text" />
+          <Property Name="CormImg" Type="varchar" MaxLength="200" />
+          <Property Name="Flower" Type="text" />
+          <Property Name="FlowerImg" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="herbdetail">
+          <Key>
+            <PropertyRef Name="DetailID" />
+          </Key>
+          <Property Name="DetailID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HerbName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Properties" Type="text" />
+          <Property Name="Help" Type="text" />
+          <Property Name="Warning" Type="text" />
+          <Property Name="ResearchName" Type="text" />
+          <Property Name="Research" Type="text" />
+          <Property Name="Author" Type="text" />
+          <Property Name="Link" Type="text" />
+        </EntityType>
+        <EntityType Name="infographic">
+          <Key>
+            <PropertyRef Name="InfoID" />
+          </Key>
+          <Property Name="InfoID" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="InfoName" Type="text" Nullable="false" />
+          <Property Name="InfoReferene" Type="text" Nullable="false" />
+          <Property Name="InfoImage" Type="text" Nullable="false" />
+        </EntityType>
+        <Association Name="herbdetail_ibfk_1">
+          <End Role="herb" Type="Self.herb" Multiplicity="1" />
+          <End Role="herbdetail" Type="Self.herbdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="herb">
+              <PropertyRef Name="HerbName" />
+            </Principal>
+            <Dependent Role="herbdetail">
+              <PropertyRef Name="HerbName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="socialherbdbModelStoreContainer">
+          <EntitySet Name="article" EntityType="Self.article" Schema="socialherbdb" store:Type="Tables" />
+          <EntitySet Name="disease" EntityType="Self.disease" Schema="socialherbdb" store:Type="Tables" />
+          <EntitySet Name="herb" EntityType="Self.herb" Schema="socialherbdb" store:Type="Tables" />
+          <EntitySet Name="herbdetail" EntityType="Self.herbdetail" Schema="socialherbdb" store:Type="Tables" />
+          <EntitySet Name="infographic" EntityType="Self.infographic" Schema="socialherbdb" store:Type="Tables" />
+          <AssociationSet Name="herbdetail_ibfk_1" Association="Self.herbdetail_ibfk_1">
+            <End Role="herb" EntitySet="herb" />
+            <End Role="herbdetail" EntitySet="herbdetail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="socialherbdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="article">
+          <Key>
+            <PropertyRef Name="ArticleID" />
+          </Key>
+          <Property Name="ArticleID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ArticleName" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Article1" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ArticleReference" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ArticleImage" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="disease">
+          <Key>
+            <PropertyRef Name="DiseaseID" />
+          </Key>
+          <Property Name="DiseaseID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DiseaseName" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Syntom" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Herb" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="herb">
+          <Key>
+            <PropertyRef Name="HerbName" />
+          </Key>
+          <Property Name="HerbName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NameOther" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="HerbImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Leaf" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="LeafImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Trunk" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="TrunkImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Root" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="RootImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Crop" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="CropImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Corm" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="CormImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Flower" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="FlowerImg" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="herbdetail" Relationship="Self.herbdetail_ibfk_1" FromRole="herb" ToRole="herbdetail" />
+        </EntityType>
+        <EntityType Name="herbdetail">
+          <Key>
+            <PropertyRef Name="DetailID" />
+          </Key>
+          <Property Name="DetailID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HerbName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Properties" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Help" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Warning" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="ResearchName" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Research" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Author" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="herb" Relationship="Self.herbdetail_ibfk_1" FromRole="herbdetail" ToRole="herb" />
+        </EntityType>
+        <EntityType Name="infographic">
+          <Key>
+            <PropertyRef Name="InfoID" />
+          </Key>
+          <Property Name="InfoID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="InfoName" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="InfoReferene" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="InfoImage" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="herbdetail_ibfk_1">
+          <End Role="herb" Type="Self.herb" Multiplicity="1" />
+          <End Role="herbdetail" Type="Self.herbdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="herb">
+              <PropertyRef Name="HerbName" />
+            </Principal>
+            <Dependent Role="herbdetail">
+              <PropertyRef Name="HerbName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="socialherbdbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="article" EntityType="Self.article" />
+          <EntitySet Name="disease" EntityType="Self.disease" />
+          <EntitySet Name="herb" EntityType="Self.herb" />
+          <EntitySet Name="herbdetail" EntityType="Self.herbdetail" />
+          <EntitySet Name="infographic" EntityType="Self.infographic" />
+          <AssociationSet Name="herbdetail_ibfk_1" Association="Self.herbdetail_ibfk_1">
+            <End Role="herb" EntitySet="herb" />
+            <End Role="herbdetail" EntitySet="herbdetail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="socialherbdbModelStoreContainer" CdmEntityContainer="socialherbdbEntities1">
+          <EntitySetMapping Name="article">
+            <EntityTypeMapping TypeName="socialherbdbModel.article">
+              <MappingFragment StoreEntitySet="article">
+                <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+                <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+                <ScalarProperty Name="Article1" ColumnName="Article" />
+                <ScalarProperty Name="ArticleReference" ColumnName="ArticleReference" />
+                <ScalarProperty Name="ArticleImage" ColumnName="ArticleImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="disease">
+            <EntityTypeMapping TypeName="socialherbdbModel.disease">
+              <MappingFragment StoreEntitySet="disease">
+                <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+                <ScalarProperty Name="DiseaseName" ColumnName="DiseaseName" />
+                <ScalarProperty Name="Syntom" ColumnName="Syntom" />
+                <ScalarProperty Name="Herb" ColumnName="Herb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="herb">
+            <EntityTypeMapping TypeName="socialherbdbModel.herb">
+              <MappingFragment StoreEntitySet="herb">
+                <ScalarProperty Name="HerbName" ColumnName="HerbName" />
+                <ScalarProperty Name="NameOther" ColumnName="NameOther" />
+                <ScalarProperty Name="HerbImg" ColumnName="HerbImg" />
+                <ScalarProperty Name="Leaf" ColumnName="Leaf" />
+                <ScalarProperty Name="LeafImg" ColumnName="LeafImg" />
+                <ScalarProperty Name="Trunk" ColumnName="Trunk" />
+                <ScalarProperty Name="TrunkImg" ColumnName="TrunkImg" />
+                <ScalarProperty Name="Root" ColumnName="Root" />
+                <ScalarProperty Name="RootImg" ColumnName="RootImg" />
+                <ScalarProperty Name="Crop" ColumnName="Crop" />
+                <ScalarProperty Name="CropImg" ColumnName="CropImg" />
+                <ScalarProperty Name="Corm" ColumnName="Corm" />
+                <ScalarProperty Name="CormImg" ColumnName="CormImg" />
+                <ScalarProperty Name="Flower" ColumnName="Flower" />
+                <ScalarProperty Name="FlowerImg" ColumnName="FlowerImg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="herbdetail">
+            <EntityTypeMapping TypeName="socialherbdbModel.herbdetail">
+              <MappingFragment StoreEntitySet="herbdetail">
+                <ScalarProperty Name="DetailID" ColumnName="DetailID" />
+                <ScalarProperty Name="HerbName" ColumnName="HerbName" />
+                <ScalarProperty Name="Properties" ColumnName="Properties" />
+                <ScalarProperty Name="Help" ColumnName="Help" />
+                <ScalarProperty Name="Warning" ColumnName="Warning" />
+                <ScalarProperty Name="ResearchName" ColumnName="ResearchName" />
+                <ScalarProperty Name="Research" ColumnName="Research" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="infographic">
+            <EntityTypeMapping TypeName="socialherbdbModel.infographic">
+              <MappingFragment StoreEntitySet="infographic">
+                <ScalarProperty Name="InfoID" ColumnName="InfoID" />
+                <ScalarProperty Name="InfoName" ColumnName="InfoName" />
+                <ScalarProperty Name="InfoReferene" ColumnName="InfoReferene" />
+                <ScalarProperty Name="InfoImage" ColumnName="InfoImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

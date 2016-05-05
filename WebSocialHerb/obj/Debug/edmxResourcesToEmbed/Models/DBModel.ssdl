@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="socialherbdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ArticleName" Type="text" Nullable="false" />
+    <Property Name="Article" Type="text" Nullable="false" />
+    <Property Name="ArticleReference" Type="text" Nullable="false" />
+    <Property Name="ArticleImage" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="disease">
+    <Key>
+      <PropertyRef Name="DiseaseID" />
+    </Key>
+    <Property Name="DiseaseID" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="DiseaseName" Type="text" Nullable="false" />
+    <Property Name="Syntom" Type="text" Nullable="false" />
+    <Property Name="Herb" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="herb">
+    <Key>
+      <PropertyRef Name="HerbName" />
+    </Key>
+    <Property Name="HerbName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NameOther" Type="text" />
+    <Property Name="HerbImg" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Leaf" Type="text" />
+    <Property Name="LeafImg" Type="varchar" MaxLength="200" />
+    <Property Name="Trunk" Type="text" />
+    <Property Name="TrunkImg" Type="varchar" MaxLength="200" />
+    <Property Name="Root" Type="text" />
+    <Property Name="RootImg" Type="varchar" MaxLength="200" />
+    <Property Name="Crop" Type="text" />
+    <Property Name="CropImg" Type="varchar" MaxLength="200" />
+    <Property Name="Corm" Type="text" />
+    <Property Name="CormImg" Type="varchar" MaxLength="200" />
+    <Property Name="Flower" Type="text" />
+    <Property Name="FlowerImg" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="herbdetail">
+    <Key>
+      <PropertyRef Name="DetailID" />
+    </Key>
+    <Property Name="DetailID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HerbName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Properties" Type="text" />
+    <Property Name="Help" Type="text" />
+    <Property Name="Warning" Type="text" />
+    <Property Name="ResearchName" Type="text" />
+    <Property Name="Research" Type="text" />
+    <Property Name="Author" Type="text" />
+    <Property Name="Link" Type="text" />
+  </EntityType>
+  <EntityType Name="infographic">
+    <Key>
+      <PropertyRef Name="InfoID" />
+    </Key>
+    <Property Name="InfoID" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="InfoName" Type="text" Nullable="false" />
+    <Property Name="InfoReferene" Type="text" Nullable="false" />
+    <Property Name="InfoImage" Type="text" Nullable="false" />
+  </EntityType>
+  <Association Name="herbdetail_ibfk_1">
+    <End Role="herb" Type="Self.herb" Multiplicity="1" />
+    <End Role="herbdetail" Type="Self.herbdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="herb">
+        <PropertyRef Name="HerbName" />
+      </Principal>
+      <Dependent Role="herbdetail">
+        <PropertyRef Name="HerbName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="socialherbdbModelStoreContainer">
+    <EntitySet Name="article" EntityType="Self.article" Schema="socialherbdb" store:Type="Tables" />
+    <EntitySet Name="disease" EntityType="Self.disease" Schema="socialherbdb" store:Type="Tables" />
+    <EntitySet Name="herb" EntityType="Self.herb" Schema="socialherbdb" store:Type="Tables" />
+    <EntitySet Name="herbdetail" EntityType="Self.herbdetail" Schema="socialherbdb" store:Type="Tables" />
+    <EntitySet Name="infographic" EntityType="Self.infographic" Schema="socialherbdb" store:Type="Tables" />
+    <AssociationSet Name="herbdetail_ibfk_1" Association="Self.herbdetail_ibfk_1">
+      <End Role="herb" EntitySet="herb" />
+      <End Role="herbdetail" EntitySet="herbdetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

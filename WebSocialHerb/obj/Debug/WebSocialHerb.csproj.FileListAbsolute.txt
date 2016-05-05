@@ -77,7 +77,6 @@ E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\Microsoft.Owin.Secu
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\Microsoft.Owin.Security.Google.xml
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\Microsoft.Owin.Security.Twitter.xml
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\obj\Debug\WebSocialHerb.csprojResolveAssemblyReference.cache
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\obj\Debug\WebSocialHerb.dll
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\obj\Debug\WebSocialHerb.pdb
 E:\SE3-2558\Project I\WebApp\WebSocialHerb\WebSocialHerb\bin\MySql.Data.dll

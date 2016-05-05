@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="socialherbdbModelStoreContainer" CdmEntityContainer="socialherbdbEntities1">
+    <EntitySetMapping Name="article">
+      <EntityTypeMapping TypeName="socialherbdbModel.article">
+        <MappingFragment StoreEntitySet="article">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="Article1" ColumnName="Article" />
+          <ScalarProperty Name="ArticleReference" ColumnName="ArticleReference" />
+          <ScalarProperty Name="ArticleImage" ColumnName="ArticleImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disease">
+      <EntityTypeMapping TypeName="socialherbdbModel.disease">
+        <MappingFragment StoreEntitySet="disease">
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="DiseaseName" ColumnName="DiseaseName" />
+          <ScalarProperty Name="Syntom" ColumnName="Syntom" />
+          <ScalarProperty Name="Herb" ColumnName="Herb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="herb">
+      <EntityTypeMapping TypeName="socialherbdbModel.herb">
+        <MappingFragment StoreEntitySet="herb">
+          <ScalarProperty Name="HerbName" ColumnName="HerbName" />
+          <ScalarProperty Name="NameOther" ColumnName="NameOther" />
+          <ScalarProperty Name="HerbImg" ColumnName="HerbImg" />
+          <ScalarProperty Name="Leaf" ColumnName="Leaf" />
+          <ScalarProperty Name="LeafImg" ColumnName="LeafImg" />
+          <ScalarProperty Name="Trunk" ColumnName="Trunk" />
+          <ScalarProperty Name="TrunkImg" ColumnName="TrunkImg" />
+          <ScalarProperty Name="Root" ColumnName="Root" />
+          <ScalarProperty Name="RootImg" ColumnName="RootImg" />
+          <ScalarProperty Name="Crop" ColumnName="Crop" />
+          <ScalarProperty Name="CropImg" ColumnName="CropImg" />
+          <ScalarProperty Name="Corm" ColumnName="Corm" />
+          <ScalarProperty Name="CormImg" ColumnName="CormImg" />
+          <ScalarProperty Name="Flower" ColumnName="Flower" />
+          <ScalarProperty Name="FlowerImg" ColumnName="FlowerImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="herbdetail">
+      <EntityTypeMapping TypeName="socialherbdbModel.herbdetail">
+        <MappingFragment StoreEntitySet="herbdetail">
+          <ScalarProperty Name="DetailID" ColumnName="DetailID" />
+          <ScalarProperty Name="HerbName" ColumnName="HerbName" />
+          <ScalarProperty Name="Properties" ColumnName="Properties" />
+          <ScalarProperty Name="Help" ColumnName="Help" />
+          <ScalarProperty Name="Warning" ColumnName="Warning" />
+          <ScalarProperty Name="ResearchName" ColumnName="ResearchName" />
+          <ScalarProperty Name="Research" ColumnName="Research" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infographic">
+      <EntityTypeMapping TypeName="socialherbdbModel.infographic">
+        <MappingFragment StoreEntitySet="infographic">
+          <ScalarProperty Name="InfoID" ColumnName="InfoID" />
+          <ScalarProperty Name="InfoName" ColumnName="InfoName" />
+          <ScalarProperty Name="InfoReferene" ColumnName="InfoReferene" />
+          <ScalarProperty Name="InfoImage" ColumnName="InfoImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
