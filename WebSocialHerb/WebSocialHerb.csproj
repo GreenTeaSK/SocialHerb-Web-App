@@ -202,8 +202,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\articlesController.cs" />
+    <Compile Include="Controllers\diseasesController.cs" />
+    <Compile Include="Controllers\herbdetailsController.cs" />
     <Compile Include="Controllers\herbsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\infographicsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -338,6 +342,26 @@
     <Content Include="Views\herbs\Details.cshtml" />
     <Content Include="Views\herbs\Edit.cshtml" />
     <Content Include="Views\herbs\Index.cshtml" />
+    <Content Include="Views\herbdetails\Create.cshtml" />
+    <Content Include="Views\herbdetails\Delete.cshtml" />
+    <Content Include="Views\herbdetails\Details.cshtml" />
+    <Content Include="Views\herbdetails\Edit.cshtml" />
+    <Content Include="Views\herbdetails\Index.cshtml" />
+    <Content Include="Views\infographics\Create.cshtml" />
+    <Content Include="Views\infographics\Delete.cshtml" />
+    <Content Include="Views\infographics\Details.cshtml" />
+    <Content Include="Views\infographics\Edit.cshtml" />
+    <Content Include="Views\infographics\Index.cshtml" />
+    <Content Include="Views\diseases\Create.cshtml" />
+    <Content Include="Views\diseases\Delete.cshtml" />
+    <Content Include="Views\diseases\Details.cshtml" />
+    <Content Include="Views\diseases\Edit.cshtml" />
+    <Content Include="Views\diseases\Index.cshtml" />
+    <Content Include="Views\articles\Create.cshtml" />
+    <Content Include="Views\articles\Delete.cshtml" />
+    <Content Include="Views\articles\Details.cshtml" />
+    <Content Include="Views\articles\Edit.cshtml" />
+    <Content Include="Views\articles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebSocialHerb.Models.infographic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InfoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfoReferene)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfoImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfoName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfoReferene)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfoImage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InfoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InfoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InfoID })
+        </td>
+    </tr>
+}
+
+</table>
