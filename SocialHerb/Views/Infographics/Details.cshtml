@@ -1,0 +1,42 @@
+﻿@model SocialHerb.Models.Infographic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Infographic</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.infoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.infoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InfoReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InfoReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.infoImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.infoImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.infoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

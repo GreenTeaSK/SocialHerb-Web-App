@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SocialHerb.Models.HerbDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.herbName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.properties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.help)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.warning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.researchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.research)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.herbName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.properties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.help)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.warning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.researchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.research)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.author)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.detailID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.detailID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.detailID })
+        </td>
+    </tr>
+}
+
+</table>

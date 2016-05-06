@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SocialHerb.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.articleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articleDetail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articleReference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articleImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleDetail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleReference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleImage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.articleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.articleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.articleID })
+        </td>
+    </tr>
+}
+
+</table>

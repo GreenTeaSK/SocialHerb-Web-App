@@ -1,0 +1,136 @@
+﻿@model SocialHerb.Models.Herb
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Herb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nameOther)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameOther)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.herbImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.herbImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leafImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leafImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.leaf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.leaf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trunkImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trunkImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trunk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trunk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rootImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rootImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.root)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.root)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cropImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cropImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.crop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.crop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cormImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cormImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.corm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.corm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flowerImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flowerImg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flower)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

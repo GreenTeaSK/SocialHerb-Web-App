@@ -1,0 +1,111 @@
+﻿@model IEnumerable<SocialHerb.Models.Herb>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nameOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.herbImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.leafImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.leaf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trunkImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trunk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rootImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.root)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cropImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.crop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cormImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.corm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flowerImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flower)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.herbImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.leafImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.leaf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trunkImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trunk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rootImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.root)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cropImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.crop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cormImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.corm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flowerImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flower)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.herbName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.herbName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.herbName })
+        </td>
+    </tr>
+}
+
+</table>
