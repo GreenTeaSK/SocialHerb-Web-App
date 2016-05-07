@@ -12,6 +12,7 @@ using SocialHerb.Models;
 using SocialHerb;
 
 
+
 namespace SocialHerb
 {
     /// <summary>
@@ -30,9 +31,9 @@ namespace SocialHerb
 
         public string Herb(string herbName)
         {
-           
-            SqlConnection con = new SqlConnection("Data Source=(LocalDb)\v11.0;Initial Catalog=HerbDB;Persist Security Info=True;User ID=admin;Password=admin; Integrated Security=True; MultipleActiveResultSets=true");
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Herb ", con);
+
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+            SqlCommand cmd = new SqlCommand(@"SELECT * FROM Herb ",con);
             con.Open();
             try
             {
@@ -42,7 +43,7 @@ namespace SocialHerb
             catch (Exception e)
             {
                 con.Close();
-                return "Failed";
+               return "Failed";
 
             }
             SqlDataReader HerbDBContext = cmd.ExecuteReader();
@@ -56,7 +57,7 @@ namespace SocialHerb
 
                 }
                 HerbDBContext.Close();
-                con.Close();
+              con.Close();
 
                 return null;
 
